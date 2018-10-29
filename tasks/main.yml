@@ -1,0 +1,14 @@
+- name: "rubygems {{ rubygems_setup_state }}"
+  become: yes
+  gem:
+    name: "{{ item }}"
+    state: "{{ rubygems_setup_state }}"
+    user_install: no
+    include_doc: "{{ rubygems_setup_document }}"
+    executable: "{{ rubygems_executable_path }}"
+  with_items:
+    - "{{ rubygems_setup_list }}"
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:

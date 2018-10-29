@@ -1,0 +1,8 @@
+rubygems_setup_state: present
+rubygems_setup_document: yes
+rubygems_setup_list:
+  - bundler
+
+# Local Variables:
+# indent-tabs-mode: nil
+# End:
